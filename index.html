@@ -855,6 +855,11 @@
   #ementa .eyebrow,
   #ementa .price {
     color: var(--red) !important;
+  
+  /* Muda a cor do tracinho ao lado de EMENTA */
+  #ementa .eyebrow::before {
+    background-color: var(--red) !important;
+    border-color: var(--red) !important;
   }
 </style>
 </head>
