@@ -795,10 +795,24 @@
   /* ---------- CORES DO CABEÇALHO ---------- */
   
   /* Fundo Vermelho Escuro Premium */
+  /* Efeito Vidro Fumado (Moderno e Premium) */
   header {
-    background-color: #7a121b !important; /* Um vermelho bem mais escuro que o original */
-    border-bottom: none !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important; /* Sombra suave */
+    background: rgba(15, 15, 15, 0.85) !important; /* Escuro transparente */
+    backdrop-filter: blur(12px) !important; /* Desfoca a imagem de fundo */
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 2px solid var(--red) !important; /* Fio vermelho elegante */
+  }
+
+  /* O botão passa a vermelho para sobressair no fundo escuro */
+  header .nav-cta .btn {
+    background-color: var(--red) !important;
+    color: var(--white) !important;
+    border: none !important;
+  }
+  
+  header .nav-cta .btn:hover {
+    background-color: var(--white) !important;
+    color: var(--red) !important;
   }
 
   /* Mantém o botão a preto */
