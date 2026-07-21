@@ -794,24 +794,18 @@
 }
   /* ---------- CORES DO CABEÇALHO ---------- */
   
-  /* Efeito Vidro Fumado (Moderno e Premium) */
+  /* Fundo Vermelho Escuro Premium */
   header {
-    background: rgba(15, 15, 15, 0.85) !important; /* Escuro transparente */
-    backdrop-filter: blur(12px) !important; /* Desfoca a imagem de fundo */
-    -webkit-backdrop-filter: blur(12px) !important;
-    border-bottom: 2px solid var(--red) !important; /* Fio vermelho elegante */
+    background-color: #7a121b !important; /* Um vermelho bem mais escuro que o original */
+    border-bottom: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important; /* Sombra suave */
   }
 
-  /* O botão passa a vermelho para sobressair no fundo escuro */
+  /* Mantém o botão a preto */
   header .nav-cta .btn {
-    background-color: var(--red) !important;
+    background-color: var(--black) !important;
     color: var(--white) !important;
-    border: none !important;
-  }
-  
-  header .nav-cta .btn:hover {
-    background-color: var(--white) !important;
-    color: var(--red) !important;
+    border: 2px solid var(--black) !important;
   }
 
   /* Textos, Links e Números passam a branco/creme */
@@ -847,6 +841,13 @@
     max-height: 50px !important; 
     width: auto !important;
     display: block !important;
+  }
+  /* ---------- CORES DA EMENTA ---------- */
+  /* Muda a palavra "EMENTA" e os preços para o vermelho da marca */
+  
+  #ementa .eyebrow,
+  #ementa .price {
+    color: var(--red) !important;
   }
 </style>
 </head>
