@@ -1,2 +1,2 @@
 # Churrasqueira-Bom-Gosto
-"Website da Churrasqueira Bom Gostol".
+"Website da Churrasqueira Bom Gosto".
