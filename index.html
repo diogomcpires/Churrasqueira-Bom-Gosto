@@ -884,11 +884,17 @@
     background-color: #f2ede4 !important; 
   }
 
-  /* Arredondar os cantos da imagem e adicionar uma sombra suave para destacar */
-  #sobre img, #about img, #historia img {
-    border-radius: 20px !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
-    object-fit: cover !important; /* Garante que a foto não fica distorcida */
+  #sobre img {
+  width: 100% !important;
+  aspect-ratio: 4 / 3 !important; /* É isto que força o formato horizontal/paisagem */
+  object-fit: cover !important; /* Garante que a foto não fica esborrachada/distorcida */
+  border-radius: 20px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+/* Puxar o conteúdo do banner principal mais para cima para centrar */
+  #hero .wrap, .hero .wrap, .home-banner .wrap, .hero-content {
+    padding-top: 40px !important; /* Reduz drasticamente o "empurrão" que o template dá no topo */
+    margin-top: -40px !important; /* Força o bloco de texto a subir em relação ao centro */
   }
 </style>
 </head>
@@ -1333,7 +1339,7 @@
 </section>
 
 <!-- ================= LOCALIZAÇÃO & CONTACTOS ================= -->
-<section class="location-split-section" id="localizacao">
+<section class="location-split-section" id="contactos">
   <div class="wrap">
     <div class="location-grid">
       
