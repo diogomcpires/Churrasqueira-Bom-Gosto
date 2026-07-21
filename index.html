@@ -870,10 +870,11 @@
     background-color: var(--red) !important;
     border-color: var(--red) !important;
   }}
-    /* Reduzir a altura da imagem principal da página inicial */
-  #hero, .hero, .hero-wrap {
-    min-height: 25vh !important;
-    height: auto !important;
+    /* Forçar a altura do banner principal (Hero) para acabar na barra de horário */
+  #hero, .hero, .hero-wrap, .home-banner {
+    min-height: 0 !important; /* Remove a altura mínima padrão do template */
+    height: 70vh !important; /* Controla a altura aqui */
+    max-height: 800px !important; /* Evita que fique gigante em ecrãs muito grandes */
   }
   /* ---------- SECÇÃO A NOSSA HISTÓRIA ---------- */
   
@@ -966,7 +967,7 @@
   <div class="wrap about-grid">
     <div class="about-frame reveal">
       <div class="about-frame reveal">
-        <img src="imagens/frangos-grelha.jpg" alt="Frangos a assar na brasa">
+        <img src="Imagens/frangos-grelha.jpg" alt="Frangos a assar na brasa">
         
         <div class="tag">
             <span>BOM GOSTO</span>
