@@ -863,11 +863,13 @@
   #ementa .price {
     color: var(--red) !important;
   
-  /* Muda a cor do tracinho ao lado de EMENTA */
-  #ementa .eyebrow::before {
+  /* Forçar o tracinho a vermelho cobrindo todas as hipóteses do template */
+  #ementa .eyebrow::before,
+  #ementa .eyebrow::after {
+    background: var(--red) !important;
     background-color: var(--red) !important;
     border-color: var(--red) !important;
-  }
+  }}
     /* Reduzir a altura da imagem principal da página inicial */
   #hero, .hero, .hero-wrap {
     min-height: 70vh !important;
