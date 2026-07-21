@@ -664,6 +664,134 @@
     .hero-facts{gap:22px;}
     .nav-cta .tel-pill span{display:none;}
   }
+  /* ---------- NOVA SECÇÃO LOCALIZAÇÃO ---------- */
+.location-split-section {
+  padding: 100px 0;
+  background-color: var(--black);
+  color: var(--white);
+  border-top: 1px solid rgba(250, 246, 239, 0.05);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.location-content .sub-heading {
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.location-content h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.info-item svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  color: rgba(250, 246, 239, 0.6); /* Creme escurecido */
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.location-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.location-actions a {
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--red);
+  color: var(--white);
+  border: 2px solid var(--red);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--red);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid rgba(250, 246, 239, 0.3);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  border-color: var(--white);
+  background-color: rgba(250, 246, 239, 0.05);
+}
+
+.location-map-container iframe {
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  width: 100%;
+  display: block;
+}
+
+/* Responsivo para telemóveis */
+@media (max-width: 992px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .location-content h2 {
+    font-size: 2.8rem;
+  }
+  .location-actions {
+    flex-direction: column;
+  }
+}
 </style>
 </head>
 <body>
@@ -1102,46 +1230,70 @@
   </div>
 </section>
 
-<!-- ================= CONTACTOS ================= -->
-<section class="contact" id="contactos">
+<!-- ================= LOCALIZAÇÃO & CONTACTOS ================= -->
+<section class="location-split-section" id="localizacao">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">Contactos</div>
-        <h2 class="h-title">Venha até<br>à brasa.</h2>
-      </div>
-    </div>
-    <div class="contact-grid reveal">
-      <div>
-        <div class="contact-block">
-          <h4>Telefone</h4>
-          <a href="tel:+351214927599">214 927 599</a>
-        </div>
-        <div class="contact-block">
-          <h4>Horário</h4>
-          <p>Quarta a Segunda</p>
-          <div class="small">Fecha às 22:00 · encerrado à terça-feira</div>
-        </div>
-        <div class="contact-block">
-          <h4>Redes sociais</h4>
-          <div class="social-row">
-            <a href="https://www.facebook.com/profile.php?id=100025904927066" aria-label="Facebook" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/churrasqueirabomgosto/" aria-label="Instagram" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            </a>
+    <div class="location-grid">
+      
+      <!-- Lado Esquerdo: Informações -->
+      <div class="location-content reveal">
+        <span class="sub-heading">ENCONTRE-NOS</span>
+        <h2>Venha à brasa</h2>
+        
+        <div class="info-items">
+          <!-- Morada -->
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div>
+              <strong>MORADA</strong>
+              <p>Av. Fernando Valle 21A<br>2700-392 Amadora</p>
+            </div>
+          </div>
+          
+          <!-- Telefone -->
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div>
+              <strong>TELEFONE</strong>
+              <p>214 927 599</p>
+            </div>
+          </div>
+          
+          <!-- Horário -->
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <div>
+              <strong>HORÁRIO</strong>
+              <p>Fecha às 22h00 — encerrado à terça-feira</p>
+            </div>
+          </div>
+
+          <!-- Serviço -->
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <div>
+              <strong>REDES SOCIAIS</strong>
+              <div class="social-row" style="display:flex;gap:15px;margin-top:5px;">
+                <a href="https://www.facebook.com/profile.php?id=100025904927066" aria-label="Facebook" target="_blank" rel="noopener" style="color:var(--white);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                <a href="https://www.instagram.com/churrasqueirabomgosto/" aria-label="Instagram" target="_blank" rel="noopener" style="color:var(--white);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="map-pin-card">
-        <div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div class="addr">Av. Fernando Valle 21A<br>2700-392 Amadora</div>
-          <div class="plus">QQ86+WV Amadora</div>
+
+        <!-- Botões -->
+        <div class="location-actions">
+          <a href="tel:+351214927599" class="btn-primary">Ligar Agora</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Churrasqueira+Bom+Gosto+Av.+Fernando+Valle+21A+Amadora" target="_blank" rel="noopener" class="btn-outline">Como Chegar</a>
         </div>
-        <a class="btn btn-outline" style="margin-top:28px;align-self:flex-start;" href="https://www.google.com/maps/search/?api=1&query=Churrasqueira+Bom+Gosto+Av.+Fernando+Valle+21A+Amadora" target="_blank" rel="noopener">Abrir no Google Maps →</a>
       </div>
+
+      <!-- Lado Direito: Mapa Embutido -->
+      <div class="location-map-container reveal">
+        <!-- Mapa do Google -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.6961159392233!2d-9.229158323608034!3d38.75344315250493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecdb4a9b5825d%3A0xc3b6b1580fa2f036!2sBom%20Gosto%20Churrasqueira!5e0!3m2!1spt-PT!2spt!4v1715000000000!5m2!1spt-PT!2spt" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      
     </div>
   </div>
 </section>
