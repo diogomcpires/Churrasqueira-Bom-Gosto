@@ -792,12 +792,13 @@
     flex-direction: column;
   }
 }
-  /* ---------- CORES DO CABEÇALHO (BARRA VERMELHA) ---------- */
-  
-  /* Fundo do menu passa a vermelho */
+  /* ---------- CORES DO CABEÇALHO ---------- */
+
+  /* Fundo do menu com degradê (Vermelho para Preto) e sombra */
   header {
-    background-color: var(--red) !important;
-    border-bottom: none !important; /* Remove qualquer linha de divisão */
+    background: linear-gradient(135deg, var(--red) 0%, var(--black) 100%) !important;
+    border-bottom: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important; /* Cria uma sombra elegante por baixo da barra */
   }
 
   /* Textos, Links e Números passam a branco/creme */
