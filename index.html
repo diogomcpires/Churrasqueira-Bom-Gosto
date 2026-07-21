@@ -884,7 +884,14 @@
     background-color: #f2ede4 !important; 
   }
 
-  #sobre img {
+  /* Retira o fundo preto da caixa e arredonda-a */
+.about-frame {
+  background-color: transparent !important;
+  border-radius: 20px !important;
+}
+
+/* Mantém o arredondamento e proporção da imagem */
+#sobre img {
   width: 100% !important;
   aspect-ratio: 4 / 3 !important; /* É isto que força o formato horizontal/paisagem */
   object-fit: cover !important; /* Garante que a foto não fica esborrachada/distorcida */
