@@ -792,6 +792,42 @@
     flex-direction: column;
   }
 }
+  /* ---------- CORES DO CABEÇALHO (BARRA VERMELHA) ---------- */
+  
+  /* Fundo do menu passa a vermelho */
+  header {
+    background-color: var(--red) !important;
+    border-bottom: none !important; /* Remove qualquer linha de divisão */
+  }
+
+  /* Textos, Links e Números passam a branco/creme */
+  header .logo,
+  header .logo div,
+  header .logo span,
+  header .nav-links a,
+  header .tel-pill {
+    color: var(--white) !important;
+  }
+
+  /* Ícones (chama do logo e telefone) passam a branco */
+  header svg {
+    color: var(--white) !important;
+    fill: var(--white) !important;
+  }
+
+  /* O botão "Pedir Online" passa a preto com letras brancas */
+  header .nav-cta .btn {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+    border: 2px solid var(--black) !important;
+  }
+
+  /* Efeito quando passas o rato por cima do botão (fica transparente com letras pretas) */
+  header .nav-cta .btn:hover {
+    background-color: transparent !important;
+    color: var(--black) !important;
+    border-color: var(--black) !important;
+  }
 </style>
 </head>
 <body>
