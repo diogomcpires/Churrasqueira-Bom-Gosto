@@ -793,12 +793,12 @@
   }
 }
   /* ---------- CORES DO CABEÇALHO ---------- */
-
-  /* Fundo do menu com degradê (Vermelho para Preto) e sombra */
+  
+  /* Fundo do menu com degradê (Vermelho -> Preto -> Vermelho) */
   header {
-    background: linear-gradient(135deg, var(--red) 0%, var(--black) 100%) !important;
+    background: linear-gradient(90deg, var(--red) 0%, var(--black) 50%, var(--red) 100%) !important;
     border-bottom: none !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important; /* Cria uma sombra elegante por baixo da barra */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
   }
 
   /* Textos, Links e Números passam a branco/creme */
