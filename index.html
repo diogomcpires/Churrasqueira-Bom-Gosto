@@ -794,11 +794,24 @@
 }
   /* ---------- CORES DO CABEÇALHO ---------- */
   
-  /* Fundo do menu com degradê (Vermelho -> Preto -> Vermelho) */
+  /* Efeito Vidro Fumado (Moderno e Premium) */
   header {
-    background: linear-gradient(90deg, var(--red) 0%, var(--black) 50%, var(--red) 100%) !important;
-    border-bottom: none !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+    background: rgba(15, 15, 15, 0.85) !important; /* Escuro transparente */
+    backdrop-filter: blur(12px) !important; /* Desfoca a imagem de fundo */
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 2px solid var(--red) !important; /* Fio vermelho elegante */
+  }
+
+  /* O botão passa a vermelho para sobressair no fundo escuro */
+  header .nav-cta .btn {
+    background-color: var(--red) !important;
+    color: var(--white) !important;
+    border: none !important;
+  }
+  
+  header .nav-cta .btn:hover {
+    background-color: var(--white) !important;
+    color: var(--red) !important;
   }
 
   /* Textos, Links e Números passam a branco/creme */
