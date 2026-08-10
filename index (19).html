@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bom Gosto Churrasqueira - Frango e Espetadas no Carvão, Amadora</title>
+<meta name="description" content="Churrasqueira Bom Gosto, desde 2009 em Amadora. Frango, espetadas e petiscos grelhados no carvão. Take-away e entregas ao domicílio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#faf6ef;
+    --white-2:#f2ecdf;
+    --black:#1a1512;
+    --black-2:#241d18;
+    --red:#c81e2c;
+    --red-deep:#7c0f18;
+    --ember:#e8622c;
+    --grey:#8a7d6f;
+    --grey-line:rgba(26,21,18,0.12);
+    --grey-line-on-dark:rgba(250,246,239,0.14);
+
+    --display: 'Fraunces', serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+
+    --wrap: 1180px;
+    --radius: 2px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--white);
+    color:var(--black);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important;}
+  }
+
+  ::selection{background:var(--red);color:var(--white);}
+
+  :focus-visible{outline:2px solid var(--red);outline-offset:3px;}
+
+  /* ---------- grate motif (signature element) ---------- */
+  .grate-rule{
+    height:10px;
+    width:100%;
+    background:repeating-linear-gradient(
+      90deg,
+      var(--black) 0 34px,
+      transparent 34px 44px
+    );
+    opacity:0.9;
+  }
+  .grate-rule.light{
+    background:repeating-linear-gradient(
+      90deg,
+      var(--white) 0 34px,
+      transparent 34px 44px
+    );
+    opacity:0.35;
+  }
+  .grate-rule.thin{height:4px;}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--red);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;height:2px;
+    background:var(--red);
+    display:inline-block;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(250,246,239,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--grey-line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    height:76px;
+  }
+  .logo{
+    display:flex;align-items:center;gap:10px;
+    font-family:var(--display);
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:-0.01em;
+  }
+  .logo .flame{width:26px;height:26px;flex-shrink:0;}
+  .site-logo{height:60px;width:auto;display:block;}
+  .logo small{
+    display:block;
+    font-family:var(--mono);
+    font-size:9.5px;
+    letter-spacing:0.14em;
+    color:var(--grey);
+    font-weight:500;
+    margin-top:1px;
+  }
+  .nav-links{
+    display:flex;align-items:center;gap:34px;
+    font-size:14.5px;font-weight:500;
+  }
+  .nav-links a{position:relative;padding:6px 0;}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+    background:var(--red);transform:scaleX(0);transform-origin:left;
+    transition:transform .25s ease;
+  }
+  .nav-links a:hover::after{transform:scaleX(1);}
+  .nav-cta{
+    display:flex;align-items:center;gap:16px;
+  }
+  .tel-pill{
+    display:flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:14px;font-weight:500;
+    color:var(--black);
+  }
+  .tel-pill svg{width:16px;height:16px;color:var(--red);}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px 22px;
+    font-family:var(--body);font-weight:600;font-size:14.5px;
+    border-radius:var(--radius);
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--red);color:var(--white);
+    box-shadow:0 0 0 0 rgba(200,30,44,0.5);
+  }
+  .btn-primary:hover{background:var(--red-deep);box-shadow:0 6px 22px -6px rgba(200,30,44,0.55);transform:translateY(-1px);}
+  .btn-dark{background:var(--black);color:var(--white);}
+  .btn-dark:hover{background:var(--red-deep);transform:translateY(-1px);}
+  .btn-outline{
+    background:transparent;color:var(--white);
+    border:1.5px solid rgba(250,246,239,0.5);
+  }
+  .btn-outline:hover{border-color:var(--white);background:rgba(250,246,239,0.08);}
+  .btn-outline-dark{
+    background:transparent;color:var(--black);
+    border:1.5px solid rgba(26,21,18,0.3);
+  }
+  .btn-outline-dark:hover{border-color:var(--black);}
+
+  .burger{
+    display:none;
+    width:38px;height:38px;
+    align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .burger span, .burger span::before, .burger span::after{
+    content:"";display:block;width:20px;height:2px;background:var(--black);
+    position:relative;transition:transform .25s ease, opacity .25s ease, top .25s ease;
+  }
+  .burger span::before{position:absolute;top:-7px;left:0;}
+  .burger span::after{position:absolute;top:7px;left:0;}
+  header.nav-open .burger span{background:transparent;}
+  header.nav-open .burger span::before{top:0;transform:rotate(45deg);background:var(--red);}
+  header.nav-open .burger span::after{top:0;transform:rotate(-45deg);background:var(--red);}
+
+  .mobile-panel{
+    display:none;
+    max-height:0;overflow:hidden;
+    border-top:0 solid var(--grey-line);
+    transition:max-height .3s ease;
+    background:var(--white);
+  }
+  header.nav-open .mobile-panel{max-height:420px;border-top-width:1px;}
+  .mobile-panel .wrap{padding:22px 32px 28px;display:flex;flex-direction:column;gap:2px;}
+  .mobile-panel a.mp-link{
+    padding:13px 4px;font-size:16px;font-weight:500;
+    font-family:var(--display);
+    border-bottom:1px solid var(--grey-line);
+  }
+  .mobile-panel .mp-cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    background:var(--black);
+    color:var(--white);
+    overflow:hidden;
+    min-height: calc(100vh - 76px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Aqui defines a tua imagem de fundo */
+    background-image: url('fundo.jpg'); 
+    background-size: cover;
+    background-position: center;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 21, 18, 0.90); /* Película escura para o texto ser legível */
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 110px 0 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+  .hero-content .eyebrow{
+    color:var(--red); /* Mudado de laranja para vermelho */
+    justify-content: center;
+  }
+  .hero-content .eyebrow::before{background:var(--red); display:none;}
+  h1.hero-title{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(48px, 6.6vw, 92px);
+    line-height:0.96;
+    letter-spacing:-0.015em;
+    margin-top: 16px;
+  }
+  h1.hero-title em{
+    font-family:'Pacifico', cursive;
+    font-style:normal;
+    font-weight:400;
+    color:var(--red);
+    text-shadow: 0px 0px 20px rgba(200, 30, 44, 0.65); /* Brilho com o tom vermelho da Bom Gosto */
+  }
+  .hero-sub{
+    margin-top:22px;
+    font-size:18px;
+    color:rgba(250,246,239,0.72);
+    max-width:640px;
+    line-height:1.6;
+  }
+  .hero-actions{
+    margin-top:32px;
+    display:flex;gap:16px;flex-wrap:wrap; justify-content: center;
+  }
+  .hero-facts{
+    margin-top:40px;
+    display:flex;gap:32px;
+    flex-wrap:wrap; justify-content: center;
+    border-top: 1px solid rgba(250,246,239,0.1);
+    padding-top: 26px;
+  }
+  .hero-fact{
+    font-family:var(--mono);
+  }
+  .hero-fact .num{
+    display:block;font-size:26px;font-weight:700;color:var(--white);
+  }
+  .hero-fact .lab{
+    display:block;font-size:11.5px;color:rgba(250,246,239,0.82);
+    letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;
+    text-shadow:0 1px 3px rgba(0,0,0,0.6);
+  }
+
+  .hero-strip{
+    position: relative;
+    z-index: 2;
+    border-top:1px solid rgba(250,246,239,0.14);
+    padding:22px 0;
+    background: rgba(26,21,18,0.6);
+    backdrop-filter: blur(5px);
+  }
+  .hero-strip .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    flex-wrap:wrap;gap:14px;
+    font-family:var(--mono);font-size:13.5px;color:rgba(250,246,239,0.68);
+  }
+  .hero-strip strong{color:var(--white);font-weight:600;}
+  .dot-live{
+    display:inline-block;width:7px;height:7px;border-radius:50%;
+    background:#59c17c;margin-right:8px;
+    box-shadow:0 0 0 3px rgba(89,193,124,0.18);
+  }
+  .dot-live.closed{
+    background:var(--red);
+    box-shadow:0 0 0 3px rgba(200,30,44,0.22);
+  }
+
+  /* ---------- hero → about transition ---------- */
+  .hero-fade{
+    height:clamp(32px, 4vw, 60px);
+    background:linear-gradient(180deg, var(--black) 0%, var(--white) 100%);
+  }
+
+  /* ---------- section shell ---------- */
+  section{padding:110px 0;}
+  .section-head{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    margin-bottom:56px;gap:24px;flex-wrap:wrap;
+  }
+  h2.h-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(32px,4vw,50px);
+    letter-spacing:-0.01em;
+    line-height:1.05;
+  }
+  .section-note{
+    max-width:340px;color:var(--grey);font-size:15px;line-height:1.6;
+  }
+
+  /* ---------- about ---------- */
+  .about{background:var(--white);}
+  .about-grid{
+    display:grid;grid-template-columns:0.9fr 1.1fr;gap:72px;align-items:center;
+  }
+  .about-frame{
+    position:relative;
+    aspect-ratio:4/5;
+    background:var(--black);
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .about-frame img{
+    width:100%;height:100%;object-fit:cover;
+    display:block;
+  }
+  .about-frame::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(26,21,18,0) 60%, rgba(26,21,18,0.8) 100%);
+    pointer-events:none;
+  }
+  .about-frame .tag{
+    position:absolute;bottom:22px;left:22px;right:22px;
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--mono);font-size:11.5px;color:rgba(250,246,239,0.7);
+    letter-spacing:0.06em;
+    z-index:2;
+  }
+
+  /* ---------- gallery ---------- */
+  .gallery{background:var(--white-2);}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+  }
+  .gallery-card{
+    background:var(--white);
+    border-radius:2px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 10px 30px -20px rgba(26,21,18,0.28);
+  }
+  .gallery-card .photo{
+    position:relative;
+    overflow:hidden;
+    aspect-ratio:4/3;
+  }
+  .gallery-card .photo img, .gallery-card .photo video{
+    width:100%;height:100%;object-fit:cover;display:block;
+    transition:transform .5s ease;
+  }
+  .gallery-card:hover .photo img, .gallery-card:hover .photo video{transform:scale(1.05);}
+  .gallery-card .card-body{padding:16px 18px 20px;}
+  .gallery-card .card-body .tag{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:0.06em;
+    color:var(--red);text-transform:uppercase;margin-bottom:6px;display:block;
+  }
+  .gallery-card .card-body h3{
+    font-family:var(--display);font-weight:600;font-size:17px;margin-bottom:6px;
+    line-height:1.25;
+  }
+  .gallery-card .card-body p{
+    font-size:13.5px;line-height:1.5;color:var(--grey);
+  }
+  .gallery-card.featured{
+    grid-column:span 3;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:stretch;
+    box-shadow:0 16px 40px -20px rgba(26,21,18,0.35);
+  }
+  .gallery-card.featured .photo{
+    flex:0 0 46%;
+    aspect-ratio:4/5;
+    min-height:0;
+  }
+  .gallery-card.featured .card-body{
+    flex:1 1 260px;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:32px 36px;background:var(--black);
+  }
+  .gallery-card.featured .card-body h3{color:var(--white);font-size:22px;}
+  .gallery-card.featured .card-body p{color:rgba(250,246,239,0.72);font-size:14.5px;}
+  @media(max-width:900px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-card.featured{grid-column:span 2;}
+    .gallery-card.featured .photo{flex:0 0 42%;}
+  }
+  @media(max-width:560px){
+    .gallery-grid{grid-template-columns:1fr;}
+    .gallery-card.featured{grid-column:span 1;flex-direction:column;}
+    .gallery-card.featured .photo{flex:0 0 auto;width:100%;max-width:none;aspect-ratio:4/3;margin:0;}
+  }
+
+  /* standalone video card (used in Sobre / Como Pedir) */
+  .video-card{
+    max-width:360px;
+    width:100%;
+    margin:56px auto 0;
+    box-sizing:border-box;
+  }
+  .video-card video{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:9/16;
+    object-fit:cover;
+    background:#000;
+    border-radius:2px;
+    box-shadow:0 24px 48px -20px rgba(26,21,18,0.35);
+  }
+  .video-card .video-caption{
+    display:block;
+    text-align:center;
+    margin-top:12px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--grey);
+    letter-spacing:0.03em;
+  }
+  @media(max-width:520px){
+    .video-card{max-width:280px;}
+  }
+
+  .about-fact-card{
+    margin-top:56px;
+    background:var(--black);color:var(--white);
+    border-radius:2px;
+    display:grid;
+    grid-template-columns:220px 1fr;
+    align-items:stretch;
+    overflow:hidden;
+    box-shadow:0 20px 44px -22px rgba(26,21,18,0.4);
+  }
+  .about-fact-card .afc-video{position:relative;}
+  .about-fact-card .afc-video video{
+    width:100%;height:100%;min-height:260px;max-height:520px;object-fit:cover;object-position:center bottom;display:block;background:#000;
+  }
+  .about-fact-card .afc-body{
+    padding:32px 36px;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;position:relative;
+    background:var(--black);
+  }
+  .about-fact-card .eyebrow{margin-bottom:16px;}
+  .fact-list{display:flex;flex-direction:column;gap:16px;align-items:center;}
+  .fact-list li{display:flex;align-items:center;gap:14px;text-align:left;}
+  .fact-list li svg{width:22px;height:22px;flex-shrink:0;color:var(--red);}
+  .fact-list li strong{display:block;font-family:var(--mono);font-size:11px;letter-spacing:0.06em;
+    text-transform:uppercase;color:rgba(250,246,239,0.5);margin-bottom:3px;}
+  .fact-list li div{font-size:15px;color:var(--white);line-height:1.4;}
+  @media(max-width:640px){
+    .about-fact-card{grid-template-columns:1fr;}
+    .about-fact-card .afc-video video{min-height:220px;}
+  }
+
+  .gallery-card.social-card{
+    background:var(--black);
+  }
+  .gallery-card.social-card .social-body{
+    height:100%;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:24px 22px;
+  }
+  .gallery-card.social-card .tag{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:0.06em;
+    color:var(--red);text-transform:uppercase;margin-bottom:8px;display:block;
+  }
+  .gallery-card.social-card h3{
+    font-family:var(--display);font-weight:600;font-size:18px;color:var(--white);
+    margin-bottom:6px;line-height:1.25;
+  }
+  .gallery-card.social-card p{
+    font-size:13px;color:rgba(250,246,239,0.62);line-height:1.5;margin-bottom:16px;
+  }
+  .social-links{display:flex;gap:10px;}
+  .social-links a{
+    display:flex;align-items:center;justify-content:center;
+    width:38px;height:38px;border-radius:999px;
+    border:1.5px solid rgba(250,246,239,0.3);
+    color:var(--white);
+    transition:border-color .2s ease, background .2s ease, transform .18s ease;
+  }
+  .social-links a svg{width:17px;height:17px;}
+  .social-links a:hover{
+    background:var(--red);border-color:var(--red);transform:translateY(-1px);
+  }
+  .about-text p{
+    font-size:17px;line-height:1.75;color:#3a322c;margin-bottom:18px;
+    max-width:520px;
+  }
+  .about-text p:first-of-type{
+    font-family:var(--display);
+    font-size:23px;
+    font-weight:500;
+    color:var(--black);
+    line-height:1.4;
+  }
+  .about-stats{
+    margin-top:36px;
+    display:grid;grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--grey-line);
+  }
+  .about-stats div{padding:22px 18px 0 0;}
+  .about-stats .num{
+    font-family:var(--mono);font-weight:700;font-size:28px;color:var(--red);
+  }
+  .about-stats .lab{
+    font-size:12.5px;color:var(--grey);margin-top:4px;letter-spacing:0.03em;
+  }
+
+  /* ---------- menu ---------- */
+  .menu-section{background:var(--black-2);color:var(--white);}
+  .menu-section .eyebrow{color:var(--ember);}
+  .menu-section .eyebrow::before{background:var(--ember);}
+  .menu-section .section-note{color:rgba(250,246,239,0.55);}
+
+  .tabs{
+    display:flex;gap:8px;flex-wrap:wrap;
+    margin-bottom:46px;
+    border-bottom:1px solid var(--grey-line-on-dark);
+    padding-bottom:0;
+  }
+  .tab{
+    font-family:var(--mono);font-size:13.5px;
+    padding:12px 6px;margin-right:22px;
+    color:rgba(250,246,239,0.45);
+    position:relative;
+    letter-spacing:0.02em;
+  }
+  .tab::after{
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;
+    background:var(--red);transform:scaleX(0);transform-origin:left;
+    transition:transform .2s ease;
+  }
+  .tab.active{color:var(--white);}
+  .tab.active::after{transform:scaleX(1);}
+  .tab:hover{color:var(--white);}
+
+  .menu-panel{display:none;}
+  .menu-panel.active{display:block;animation:fadeIn .35s ease;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+  .menu-list{
+    display:grid;grid-template-columns:1fr 1fr;gap:0 64px;
+  }
+  .menu-item{
+    display:flex;align-items:baseline;gap:10px;
+    padding:16px 0;
+    border-bottom:1px solid var(--grey-line-on-dark);
+  }
+  .menu-item .name{
+    font-family:var(--display);font-size:18px;font-weight:500;
+    white-space:nowrap;
+  }
+  .menu-item .fill{
+    flex:1;border-bottom:1px dotted rgba(250,246,239,0.28);
+    transform:translateY(-5px);
+  }
+  .menu-item .price{
+    font-family:var(--mono);font-size:16px;font-weight:600;color:var(--ember);
+    white-space:nowrap;
+  }
+  .menu-item .desc{
+    display:block;width:100%;font-size:13px;color:rgba(250,246,239,0.45);
+    margin-top:3px;font-family:var(--body);
+  }
+  .menu-item-wrap{display:flex;flex-direction:column;width:100%;}
+  .menu-item-wrap .row{display:flex;align-items:baseline;gap:10px;}
+
+  .menu-foot{
+    margin-top:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
+    font-family:var(--mono);font-size:13px;color:rgba(250,246,239,0.45);
+  }
+
+  @media(max-width:760px){.menu-list{grid-template-columns:1fr;}}
+
+  /* ---------- como pedir ---------- */
+  .steps{background:var(--white-2);}
+  .steps-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--grey-line);
+    border:1px solid var(--grey-line);
+  }
+  .step{
+    background:var(--white);padding:44px 34px;
+  }
+  .step-top{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .step-badge{
+    width:36px;height:36px;border-radius:50%;flex-shrink:0;
+    background:var(--red);color:var(--white);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);font-weight:700;font-size:13px;
+  }
+  .step-kicker{
+    font-family:var(--mono);font-size:12px;letter-spacing:0.08em;
+    color:var(--grey);text-transform:uppercase;
+  }
+  .step h3{
+    font-family:var(--display);font-size:24px;font-weight:600;margin:0 0 12px;
+  }
+  .step p{color:var(--grey);font-size:15px;line-height:1.6;}
+  .step .phones{margin-top:18px;font-family:var(--mono);font-size:15px;}
+  .step .phones a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--red);
+    color:var(--white);
+    padding:12px 22px;
+    border-radius:var(--radius);
+    font-weight:600;
+    transition:transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  }
+  .step .phones a:hover{
+    background:var(--red-deep);
+    transform:translateY(-2px);
+    box-shadow:0 6px 15px -4px rgba(200,30,44,0.4);
+  }
+
+  .step.step-featured{background:var(--red);}
+  .step.step-featured .step-badge{background:var(--black);}
+  .step.step-featured .step-kicker{color:rgba(250,246,239,0.7);}
+  .step.step-featured h3{color:var(--white);}
+  .step.step-featured p{color:rgba(250,246,239,0.9);}
+
+  .order-cta{
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;
+    background:var(--black);color:var(--white);
+    padding:36px 40px;border-radius:2px;margin-bottom:24px;
+  }
+  .order-cta h3{font-family:var(--display);font-weight:600;font-size:24px;margin:0 0 6px;}
+  .order-cta p{color:rgba(250,246,239,0.7);font-size:14.5px;}
+  .order-cta .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--red);color:var(--white);
+    padding:16px 28px;border-radius:var(--radius);
+    font-family:var(--mono);font-weight:700;font-size:16px;white-space:nowrap;
+    transition:transform .2s ease, background .2s ease;
+  }
+  .order-cta .btn:hover{background:var(--red-deep);transform:translateY(-2px);}
+  .order-cta .btn svg{width:18px;height:18px;flex-shrink:0;}
+  .order-options{
+    display:grid;grid-template-columns:1fr auto;gap:20px;
+    align-items:stretch;
+  }
+  .order-options-stack{
+    display:flex;flex-direction:column;gap:20px;
+  }
+  .order-option{
+    background:var(--white);border:1px solid var(--grey-line);
+    padding:28px 30px;border-radius:2px;
+  }
+  .order-option svg{width:28px;height:28px;color:var(--red);margin-bottom:14px;display:block;}
+  .order-option h4{font-family:var(--display);font-weight:600;font-size:18px;margin:0 0 6px;}
+  .order-option p{color:var(--grey);font-size:14px;line-height:1.5;}
+  .order-option.order-media{
+    padding:0;overflow:hidden;position:relative;background:var(--black);
+    display:flex;flex-direction:column;height:460px;aspect-ratio:9/16;align-self:start;
+  }
+  .order-option.order-media video{
+    width:100%;flex:1;min-height:0;object-fit:contain;display:block;background:#000;
+  }
+  @media(max-width:640px){
+    .order-option.order-media{height:auto;width:100%;max-width:280px;margin:0 auto;}
+  }
+  .order-media-caption{padding:18px 20px 20px;}
+  .order-media-caption h4{color:var(--white);margin:0 0 4px;font-size:16px;}
+  .order-media-caption p{color:rgba(250,246,239,0.65);font-size:13px;}
+  .order-hours{
+    margin-top:22px;font-family:var(--mono);font-size:13px;color:var(--grey);text-align:center;
+  }
+  @media(max-width:640px){
+    .order-cta{flex-direction:column;align-items:flex-start;}
+    .order-options{grid-template-columns:1fr;}
+  }
+  .step.step-featured .btn-dark{background:var(--black);}
+  .step.step-featured .btn-dark:hover{background:var(--white);color:var(--red);}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:var(--white-2);}
+  .reviews-grid{
+    display:grid;grid-template-columns:0.75fr 1.25fr;gap:64px;
+  }
+  .rating-card{
+    background:var(--black);color:var(--white);
+    padding:44px;border-radius:var(--radius);
+    height:fit-content;
+  }
+  .rating-score{
+    font-family:var(--display);font-size:76px;font-weight:700;line-height:1;
+  }
+  .stars{display:flex;gap:5px;margin:16px 0 10px;}
+  .stars svg{width:18px;height:18px;color:var(--ember);}
+  .rating-count{font-family:var(--mono);font-size:13.5px;color:rgba(250,246,239,0.55);}
+  .rating-bars{margin-top:30px;display:flex;flex-direction:column;gap:9px;}
+  .rating-bar{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;color:rgba(250,246,239,0.55);}
+  .rating-bar .track{flex:1;height:5px;background:rgba(250,246,239,0.12);border-radius:2px;overflow:hidden;}
+  .rating-bar .fill{height:100%;background:var(--ember);}
+
+  .testimonials{display:flex;flex-direction:column;gap:1px;background:var(--grey-line);border:1px solid var(--grey-line);}
+  .testimonial{background:var(--white);padding:30px 34px;}
+  .testimonial .stars{margin:0 0 14px;}
+  .testimonial .stars svg{width:14px;height:14px;color:var(--red);}
+  .testimonial p{
+    font-family:var(--display);font-size:19px;font-style:italic;font-weight:500;
+    line-height:1.5;color:var(--black);
+  }
+  .testimonial .who{
+    margin-top:14px;font-family:var(--mono);font-size:12.5px;color:var(--grey);
+    letter-spacing:0.03em;
+  }
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--black);color:var(--white);}
+  .contact .eyebrow{color:var(--ember);}
+  .contact .eyebrow::before{background:var(--ember);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;}
+  .contact-block{margin-bottom:34px;}
+  .contact-block h4{
+    font-family:var(--mono);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;
+    color:rgba(250,246,239,0.45);margin-bottom:10px;
+  }
+  .contact-block p, .contact-block a{
+    font-family:var(--display);font-size:22px;font-weight:500;line-height:1.4;
+  }
+  .contact-block a:hover{color:var(--ember);}
+  .contact-block .small{
+    font-family:var(--body);font-size:14.5px;color:rgba(250,246,239,0.55);margin-top:6px;
+  }
+  .social-row{display:flex;gap:14px;margin-top:8px;}
+  .social-row a{
+    width:44px;height:44px;border:1px solid rgba(250,246,239,0.25);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .social-row a:hover{border-color:var(--ember);background:rgba(232,98,44,0.1);}
+  .social-row svg{width:19px;height:19px;}
+
+  .map-pin-card{
+    background:var(--black-2);border:1px solid var(--grey-line-on-dark);
+    padding:36px;border-radius:var(--radius);
+    display:flex;flex-direction:column;justify-content:space-between;
+    min-height:100%;
+  }
+  .map-pin-card svg{width:38px;height:38px;color:var(--red);margin-bottom:18px;}
+  .map-pin-card .addr{font-family:var(--display);font-size:21px;font-weight:500;line-height:1.4;}
+  .map-pin-card .plus{font-family:var(--mono);font-size:12.5px;color:rgba(250,246,239,0.4);margin-top:10px;}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--black-2);border-top:1px solid var(--grey-line-on-dark);padding:38px 0;}
+  .footer-row{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+    font-family:var(--mono);font-size:12.5px;color:rgba(250,246,239,0.4);
+  }
+  .footer-row .logo{color:rgba(250,246,239,0.7);font-size:16px;}
+  .footer-row .logo .flame{color:var(--red);}
+
+  /* ---------- reveal on scroll ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:980px){
+    .nav-links{display:none;}
+    .nav-cta{display:none;}
+    .burger{display:flex;}
+    .mobile-panel{display:block;}
+    .hero-grid{grid-template-columns:1fr;min-height:auto;padding-bottom:60px;}
+    .hero-scene{min-height:300px;order:-1;}
+    .about-grid, .contact-grid, .reviews-grid{grid-template-columns:1fr;gap:44px;}
+    .about-stats{grid-template-columns:1fr 1fr 1fr;}
+    .steps-grid{grid-template-columns:1fr;}
+    section{padding:76px 0;}
+  }
+  @media(max-width:520px){
+    .wrap{padding:0 20px;}
+    .hero-facts{gap:22px;}
+    .nav-cta .tel-pill span{display:none;}
+  }
+  /* ---------- NOVA SECÇÃO LOCALIZAÇÃO ---------- */
+.location-split-section {
+  padding: 100px 0;
+  background-color: var(--black);
+  color: var(--white);
+  border-top: 1px solid rgba(250, 246, 239, 0.05);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.location-content .sub-heading {
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.location-content h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.info-item svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  color: rgba(250, 246, 239, 0.6); /* Creme escurecido */
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.location-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.location-actions a {
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--red);
+  color: var(--white);
+  border: 2px solid var(--red);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--red);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid rgba(250, 246, 239, 0.3);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  border-color: var(--white);
+  background-color: rgba(250, 246, 239, 0.05);
+}
+
+.location-map-container iframe {
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  width: 100%;
+  display: block;
+}
+
+/* Responsivo para telemóveis */
+@media (max-width: 992px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .location-content h2 {
+    font-size: 2.8rem;
+  }
+  .location-actions {
+    flex-direction: column;
+  }
+}
+  /* ---------- CORES DO CABEÇALHO ---------- */
+  
+  /* Fundo Vermelho Escuro Premium */
+  header {
+    background-color: #7a121b !important; /* Um vermelho bem mais escuro que o original */
+    border-bottom: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important; /* Sombra suave */
+  }
+
+  /* Mantém o botão a preto */
+  header .nav-cta .btn {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+    border: 2px solid var(--black) !important;
+  }
+
+  /* Mantém o botão a preto */
+  header .nav-cta .btn {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+    border: 2px solid var(--black) !important;
+  }
+
+  /* Mantém o botão a preto */
+  header .nav-cta .btn {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+    border: 2px solid var(--black) !important;
+  }
+
+  /* Textos, Links e Números passam a branco/creme */
+  header .logo,
+  header .logo div,
+  header .logo span,
+  header .nav-links a,
+  header .tel-pill {
+    color: var(--white) !important;
+  }
+
+  /* Ícones (chama do logo e telefone) passam a branco */
+  header svg {
+    color: var(--white) !important;
+    fill: var(--white) !important;
+  }
+
+  /* O botão "Pedir Online" passa a preto com letras brancas */
+  header .nav-cta .btn {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+    border: 2px solid var(--black) !important;
+  }
+
+  /* Efeito quando passas o rato por cima do botão (fica transparente com letras pretas) */
+  header .nav-cta .btn:hover {
+    background-color: transparent !important;
+    color: var(--black) !important;
+    border-color: var(--black) !important;
+  }
+  /* OBRIGAR O LOGÓTIPO A FICAR PEQUENO */
+  header a.logo img {
+    max-height: 50px !important; 
+    width: auto !important;
+    display: block !important;
+  }
+  /* ---------- CORES DA EMENTA ---------- */
+  /* Muda a palavra "EMENTA" e os preços para o vermelho da marca */
+  
+  #ementa .eyebrow,
+  .menu-section .eyebrow,
+  #ementa .price,
+  .menu-section .price {
+    color: var(--red) !important;
+  } /* A chaveta que faltava estava aqui! */
+  
+  /* Forçar o tracinho a vermelho cobrindo todas as hipóteses do template */
+  #ementa .eyebrow::before,
+  .menu-section .eyebrow::before,
+  #ementa .eyebrow::after,
+  .menu-section .eyebrow::after {
+    background: var(--red) !important;
+    background-color: var(--red) !important;
+    border-color: var(--red) !important;
+  }
+    /* Forçar a altura do banner principal (Hero) para acabar na barra de horário */
+  #hero, .hero, .hero-wrap, .home-banner {
+    min-height: 0 !important; /* Remove a altura mínima padrão do template */
+    height: 90vh !important; /* Controla a altura aqui */
+    max-height: 800px !important; /* Evita que fique gigante em ecrãs muito grandes */
+  }
+  /* ---------- SECÇÃO A NOSSA HISTÓRIA ---------- */
+  
+  /* Escurecer o fundo muito ligeiramente (um tom "pérola/areia" quente) */
+  /* Nota: Usa o ID que estiver no teu HTML, costuma ser #sobre, #about ou #historia */
+  #sobre, #about, #historia {
+    background-color: #f2ede4 !important; 
+  }
+
+  /* Retira o fundo preto da caixa e arredonda-a */
+.about-frame {
+  background-color: transparent !important;
+  border-radius: 20px !important;
+}
+
+/* Mantém o arredondamento e proporção da imagem */
+#sobre img {
+  width: 100% !important;
+  aspect-ratio: 4 / 3 !important; /* É isto que força o formato horizontal/paisagem */
+  object-fit: cover !important; /* Garante que a foto não fica esborrachada/distorcida */
+  border-radius: 20px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+/* Puxar o conteúdo do banner principal mais para cima para centrar */
+  #hero .wrap, .hero .wrap, .home-banner .wrap, .hero-content {
+    padding-top: 40px !important; /* Reduz drasticamente o "empurrão" que o template dá no topo */
+    margin-top: -40px !important; /* Força o bloco de texto a subir em relação ao centro */
+  }
+  /* ---------- DIVISÃO SOBRE / GALERIA ---------- */
+  
+  /* Nota: Verifica no teu HTML se o ID desta secção é mesmo "galeria" */
+  #galeria, .gallery {
+    border-top: 1px solid #dcd7ce !important; /* Cria uma linha divisória fina e suave */
+    background-color: #ffffff !important; /* Fundo branco puro para contrastar com o bege de cima */
+    padding-top: 60px !important; /* Dá um espaço para o conteúdo respirar depois da linha */
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">
+      <img src="logo.png" alt="Churrasqueira Bom Gosto" class="site-logo">
+    </a>
+    <nav class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#ementa">Ementa</a>
+      <a href="#pedir">Como Pedir</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="tel-pill" href="tel:+351214927599">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        <span>214 927 599</span>
+      </a>
+      <a class="btn btn-primary" href="#pedir">Ligar & Encomendar</a>
+    </div>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <div class="wrap">
+      <a class="mp-link" href="#sobre">Sobre</a>
+      <a class="mp-link" href="#galeria">Galeria</a>
+      <a class="mp-link" href="#ementa">Ementa</a>
+      <a class="mp-link" href="#pedir">Como Pedir</a>
+      <a class="mp-link" href="#avaliacoes">Avaliações</a>
+      <a class="mp-link" href="#contactos">Contactos</a>
+      <div class="mp-cta">
+        <a class="btn btn-primary" href="#pedir">Ligar & Encomendar</a>
+        <a class="tel-pill" href="tel:+351214927599">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          <span>214 927 599</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-content reveal in">
+    <div class="eyebrow">Amadora · Grelhados no carvão</div>
+    <h1 class="hero-title">Churrasqueira<br><em>Bom Gosto</em></h1>
+    <p class="hero-sub">Sabor que se sente a fumo e brasa: frango, espetadas e petiscos caseiros grelhados no carvão, desde 2009. Take-away e entrega ao domicílio na zona de Amadora.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#pedir">Ligar & Encomendar</a>
+      <a class="btn btn-outline" href="#ementa">Ver Ementa</a>
+    </div>
+    <div class="hero-facts">
+      <div class="hero-fact"><span class="num">2009</span><span class="lab">Desde</span></div>
+      <div class="hero-fact"><span class="num">4.4 ★</span><span class="lab">Avaliação Google</span></div>
+      <div class="hero-fact"><span class="num">800</span><span class="lab">Avaliações</span></div>
+    </div>
+  </div>
+  
+  <div class="hero-strip">
+    <div class="wrap">
+      <span id="liveStatus"><span class="dot-live"></span>Aberto hoje &middot; fecha às <strong>22:00</strong></span>
+      <span>Av. Fernando Valle 21A, 2700-392 Amadora</span>
+      <span>Take-away <strong>·</strong> Entrega ao domicílio</span>
+    </div>
+  </div>
+</section>
+
+<div class="hero-fade"></div>
+
+<!-- ================= SOBRE ================= -->
+<section class="about" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-frame reveal">
+        <img src="fachada-loja.jpg" alt="Fachada da Churrasqueira Bom Gosto em Amadora">
+        
+        <div class="tag">
+            <span>BOM GOSTO</span>
+            <span>AMADORA, PT</span>
+        </div>
+    </div>
+    <div class="about-text reveal">
+      <div class="eyebrow">A nossa história</div>
+      <p>Desde 2009 que revolucionámos o churrasco na zona: nada de atalhos, só carvão a sério e a mesma receita desde o primeiro dia.</p>
+      <p>Na Bom Gosto o frango é assado devagar sobre brasa, as espetadas são temperadas na casa e os acompanhamentos, do arroz à salada de polvo, são feitos todos os dias na cozinha. É um espaço pequeno, pensado para take-away e entregas, mas o cuidado é sempre o mesmo.</p>
+      <p>Fica na Av. Fernando Valle, em Amadora, a poucos passos da Urbanização da Vila Chã. E continua, ano após ano, a ser um dos pontos de referência da zona para quem procura um churrasco a sério.</p>
+      <div class="about-stats">  
+        <div><div class="num">16</div><div class="lab">Anos de casa</div></div>
+        <div><div class="num">4.4</div><div class="lab">Nota média Google</div></div>
+        <div><div class="num">800</div><div class="lab">Avaliações</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="about-fact-card reveal">
+      <div class="afc-video">
+        <video muted autoplay loop playsinline controls preload="metadata">
+          <source src="grelha-video-3.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="afc-body">
+        <span class="eyebrow">Direto da grelha para si</span>
+        <ul class="fact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div><strong>Horário</strong>Quarta a Segunda &middot; fecha às 22:00</div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <div><strong>Serviço</strong>Take-away e entrega ao domicílio, num raio de 5 km</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= GALERIA ================= -->
+<section class="gallery" id="galeria">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Direto da loja</div>
+        <h2 class="h-title">É isto que é<br>Bom Gosto.</h2>
+      </div>
+      <p class="section-note">Fotografias tiradas na nossa churrasqueira. Sem encenação, é mesmo assim que sai da brasa.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-card featured">
+        <div class="photo">
+          <video muted autoplay loop playsinline controls preload="metadata">
+            <source src="grelha-video-1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="card-body">
+          <span class="tag">Vídeo</span>
+          <h3>Ao vivo na brasa</h3>
+          <p>Sem encenação: é mesmo assim que a nossa grelha trabalha, todos os dias.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="frango-grelha-macro.jpg" alt="Frango grelhado no carvão, direto da brasa" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Frango grelhado no carvão</h3>
+          <p>O clássico da casa, sempre a sair fresco da brasa.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="espetadas-brasa.jpg" alt="Espetadas de porco, pimento e ananás prontas para a grelha" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Espetadas prontas para a brasa</h3>
+          <p>Porco, pimento e ananás, à espera da grelha quente.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="balcao-petiscos.jpg" alt="Balcão com petiscos, gratinados e almôndegas" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Petiscos e acompanhamentos do balcão</h3>
+          <p>Gratinados, croquetes e petiscos feitos na hora.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="frangos-grelha.jpg" alt="Cozinheiro a grelhar espetadas no carvão" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>O nosso churrasqueiro em ação</h3>
+          <p>Quem trata da brasa todos os dias, com a mesma atenção de sempre.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="entrecosto-enchidos.jpg" alt="Entrecosto e enchidos grelhados no carvão" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Entrecosto e enchidos na brasa</h3>
+          <p>Bem passados no carvão, com aquele sabor a fumo.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="peixe-legumes.jpg" alt="Peixe grelhado com batata e legumes salteados" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Peixe grelhado com legumes</h3>
+          <p>Fresco e grelhado na hora, com legumes salteados.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="chourico-esparregado.jpg" alt="Chouriço assado com esparregado e batata a murro" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Chouriço assado com esparregado</h3>
+          <p>Um clássico português, feito à moda da casa.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="embalado-levar.jpg" alt="Comida embalada, pronta para levar" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Pronto a levar, fresco da brasa</h3>
+          <p>Embalado com cuidado, para chegar quente a sua casa.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="atendimento-balcao.jpg" alt="Atendimento ao balcão da Bom Gosto" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>O atendimento de sempre</h3>
+          <p>A mesma equipa, o mesmo cuidado, todos os dias.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="arroz-camarao.jpg" alt="Arroz de camarão fresco no balcão" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Arroz de camarão</h3>
+          <p>Camarão fresco e arroz solto, feito no balcão.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <div class="photo">
+          <img src="balcao-servico.jpg" alt="Balcão de pratos do dia com a equipa Bom Gosto" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Pratos do dia, sempre a postos</h3>
+          <p>Muda todos os dias. É só perguntar o que temos hoje.</p>
+        </div>
+      </div>
+      <div class="gallery-card social-card">
+        <div class="card-body social-body">
+          <span class="tag">Siga-nos</span>
+          <h3>Instagram &amp; Facebook</h3>
+          <p>A ementa do dia e todas as fotos, primeiro nas redes.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/churrasqueirabomgosto/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100025904927066" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= CARDÁPIO ================= -->
+<section class="menu-section" id="ementa">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Ementa</div>
+        <h2 class="h-title">Direto da brasa<br>para a mesa.</h2>
+      </div>
+      <p class="section-note">Ementa completa disponível para take-away e entrega. Pergunte-nos por telefone se procurar algo que não está aqui.</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist">
+      <button class="tab active" data-tab="grelhados">Grelhados &amp; Espetadas</button>
+      <button class="tab" data-tab="acomp">Pratos &amp; Acompanhamentos</button>
+      <button class="tab" data-tab="saladas">Saladas & Entradas</button>
+      <button class="tab" data-tab="titi">Batatas Titi</button>
+      <button class="tab" data-tab="bebidas-alc">Bebidas Alcoólicas</button>
+      <button class="tab" data-tab="bebidas">Bebidas</button>
+      <button class="tab" data-tab="sobremesas">Sobremesas</button>
+    </div>
+
+    <div class="menu-panel active" id="grelhados">
+      <div class="menu-list">
+        <div class="menu-item"><span class="name">Frango Assado</span></div>
+        <div class="menu-item"><span class="name">Meio Frango Assado</span></div>
+        <div class="menu-item"><span class="name">Picanha <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1 dose</span></span></div>
+        <div class="menu-item"><span class="name">Espetada de Porco <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+        <div class="menu-item"><span class="name">Espetada de Porco Preto <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+        <div class="menu-item"><span class="name">Entrecosto <span style="opacity:.5;font-size:12px;font-family:var(--mono)">300g</span></span></div>
+        <div class="menu-item"><span class="name">Frango Espiritual <span style="opacity:.5;font-size:12px;font-family:var(--mono)">300g</span></span></div>
+        <div class="menu-item"><span class="name">Espetada Frango e Bacon <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+        <div class="menu-item"><span class="name">Espetada de Lulas <span style="opacity:.5;font-size:12px;font-family:var(--mono)">300g</span></span></div>
+        <div class="menu-item"><span class="name">Salsicha Toscana</span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="acomp">
+      <div class="menu-list">
+        <div class="menu-item"><span class="name">Bacalhau à Brás</span></div>
+        <div class="menu-item"><span class="name">Bacalhau no Forno com Crosta de Broa</span></div>
+        <div class="menu-item"><span class="name">Empadão de Carne</span></div>
+        <div class="menu-item"><span class="name">Almôndegas <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+        <div class="menu-item"><span class="name">Batata à Murro <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+        <div class="menu-item"><span class="name">Batata Frita</span></div>
+        <div class="menu-item"><span class="name">Arroz Branco <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+        <div class="menu-item"><span class="name">Arroz de Cenoura <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+        <div class="menu-item"><span class="name">Legumes Assados no Forno ou Cozidos</span></div>
+        <div class="menu-item"><span class="name">Feijão Preto <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+        <div class="menu-item"><span class="name">Panado de Peru <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+        <div class="menu-item"><span class="name">Pataniscas <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="saladas">
+      <div class="menu-list">
+        <div class="menu-item-wrap" style="padding:16px 0;border-bottom:1px solid var(--grey-line-on-dark);">
+          <div class="row"><span class="name">Salada Mista</span></div>
+          <span class="desc">Alface, cenoura, milho, cebola e tomate cherry.</span>
+        </div>
+        <div class="menu-item-wrap" style="padding:16px 0;border-bottom:1px solid var(--grey-line-on-dark);">
+          <div class="row"><span class="name">Esparregado</span></div>
+          <span class="desc">Azeite, alho, cebola, pimenta e vinagre (1 dose, 250g).</span>
+        </div>
+        <div class="menu-item-wrap" style="padding:16px 0;border-bottom:1px solid var(--grey-line-on-dark);">
+          <div class="row"><span class="name">Salada de Ovas</span></div>
+          <span class="desc">Azeite, alho, cebola, pimenta e vinagre (1 dose, 250g).</span>
+        </div>
+        <div class="menu-item-wrap" style="padding:16px 0;border-bottom:1px solid var(--grey-line-on-dark);">
+          <div class="row"><span class="name">Salada de Camarão</span></div>
+          <span class="desc">Azeite, alho, cebola, pimenta e vinagre (1 dose, 250g).</span>
+        </div>
+        <div class="menu-item-wrap" style="padding:16px 0;border-bottom:1px solid var(--grey-line-on-dark);">
+          <div class="row"><span class="name">Salada de Polvo</span></div>
+          <span class="desc">Azeite, alho, cebola, pimenta e vinagre (1 dose, 250g).</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="titi">
+      <div class="menu-list">
+        <div class="menu-item"><span class="name">Titi 110g</span></div>
+        <div class="menu-item"><span class="name">Titi 180g</span></div>
+        <div class="menu-item"><span class="name">Titi 250g</span></div>
+        <div class="menu-item"><span class="name">Titi 400g</span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="bebidas-alc">
+      <div class="menu-list">
+        <div class="menu-item"><span class="name">Cerveja Sagres <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Cerveja Sagres Lata <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Cerveja Sagres Zero <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Cerveja Sagres <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
+        <div class="menu-item"><span class="name">Cerveja Super Bock <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Cerveja Super Bock Lata <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Cerveja Super Bock <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
+        <div class="menu-item"><span class="name">Somersby <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Martini <span style="opacity:.5;font-size:12px;font-family:var(--mono)">55ml</span></span></div>
+        <div class="menu-item"><span class="name">Favaios <span style="opacity:.5;font-size:12px;font-family:var(--mono)">55ml</span></span></div>
+        <div class="menu-item"><span class="name">Vinho Verde Casal Garcia <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+        <div class="menu-item"><span class="name">Vinho Verde Muralhas <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+        <div class="menu-item"><span class="name">Vinho Verde Mundus <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+        <div class="menu-item"><span class="name">Vinho Mundus Rosé <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+        <div class="menu-item"><span class="name">Vinho Mateus Rosé <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+        <div class="menu-item"><span class="name">Vinho Tinto Pegões <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+        <div class="menu-item"><span class="name">Vinho Tinto Papa Figos <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+        <div class="menu-item"><span class="name">Vinho J.P. Tinto <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+        <div class="menu-item"><span class="name">Vinho Branco J.P. <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+        <div class="menu-item"><span class="name">Vinho Branco João Pires <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+      </div>
+      <p style="font-family:var(--mono);font-size:13px;color:rgba(250,246,239,0.45);margin-top:24px;">Consumo responsável. Venda de bebidas alcoólicas proibida a menores de 18 anos.</p>
+    </div>
+
+    <div class="menu-panel" id="bebidas">
+      <div class="menu-list">
+        <div class="menu-item"><span class="name">Água Luso <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">Coca-Cola <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Coca-Cola <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
+        <div class="menu-item"><span class="name">Coca-Cola <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">Coca-Cola Zero <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
+        <div class="menu-item"><span class="name">Coca-Cola Zero <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">Sumol de Laranja <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Sumol de Laranja <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">Sumol de Ananás <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Sumol de Ananás <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Manga <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Manga <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Limão <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Limão <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Pêssego <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Pêssego <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">Compal de Pêssego <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
+        <div class="menu-item"><span class="name">Compal de Maçã <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
+        <div class="menu-item"><span class="name">Compal de Manga <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
+        <div class="menu-item"><span class="name">Guaraná <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">7 Up <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">Joy Laranja <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="sobremesas">
+      <div class="menu-list">
+        <div class="menu-item"><span class="name">Cheesecake de Frutos Vermelhos</span></div>
+        <div class="menu-item"><span class="name">Mousse de Chocolate</span></div>
+        <div class="menu-item"><span class="name">Baba de Camelo</span></div>
+      </div>
+    </div>
+
+    <div class="menu-foot">
+      <span>Ementa sujeita a alteração sem aviso prévio</span>
+      <a class="btn btn-primary" href="#pedir">Como Pedir &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMO PEDIR ================= -->
+<section class="steps" id="pedir">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Como pedir</div>
+        <h2 class="h-title">Peça como lhe for<br>mais fácil.</h2>
+      </div>
+    </div>
+
+    <div class="order-cta reveal">
+      <div>
+        <h3>Ligar e Encomendar</h3>
+        <p>A forma mais rápida, sem intermediários nem taxas de serviço.</p>
+      </div>
+      <a class="btn" href="tel:+351214927599">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        214 927 599
+      </a>
+    </div>
+
+    <div class="order-options reveal">
+      <div class="order-options-stack">
+        <div class="order-option">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <h4>Take-away</h4>
+          <p>Encomende por telefone e levante na loja, sem esperas.</p>
+        </div>
+        <div class="order-option">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8Z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <h4>Entrega ao Domicílio</h4>
+          <p>Levamos a sua encomenda a casa, num raio de 5 km.</p>
+        </div>
+      </div>
+      <div class="order-option order-media">
+        <video muted autoplay loop playsinline controls preload="metadata">
+          <source src="grelha-video-2.mp4" type="video/mp4">
+        </video>
+        <div class="order-media-caption">
+          <h4>A preparar os pedidos</h4>
+          <p>Sem pressas, sem atalhos: é assim que sai cada encomenda.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="order-hours">Aberto de quarta a segunda &middot; fecha às 22:00</p>
+
+  </div>
+</section>
+
+<!-- ================= AVALIAÇÕES ================= -->
+<section class="reviews" id="avaliacoes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" style="color:var(--red)">Avaliações</div>
+        <h2 class="h-title">O que dizem<br>os clientes.</h2>
+      </div>
+    </div>
+    <div class="reviews-grid reveal">
+      <div class="rating-card">
+        <div class="rating-score">4.4</div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" opacity="0.35"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="rating-count">800 avaliações no Google</div>
+        <div class="rating-bars">
+          <div class="rating-bar"><span>5</span><div class="track"><div class="fill" style="width:64%"></div></div></div>
+          <div class="rating-bar"><span>4</span><div class="track"><div class="fill" style="width:18%"></div></div></div>
+          <div class="rating-bar"><span>3</span><div class="track"><div class="fill" style="width:8%"></div></div></div>
+          <div class="rating-bar"><span>2</span><div class="track"><div class="fill" style="width:4%"></div></div></div>
+          <div class="rating-bar"><span>1</span><div class="track"><div class="fill" style="width:6%"></div></div></div>
+        </div>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p>"Um dos melhores da zona: espaço pequeno, mas o frango e os grelhados no carvão não desiludem."</p>
+          <div class="who">CAROLINA C. &middot; GUIA LOCAL GOOGLE</div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p>"Boa comida e boa variedade, sempre a bons preços. Voltamos sempre que passamos por Amadora."</p>
+          <div class="who">CLIENTE &middot; AVALIAÇÃO GOOGLE</div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p>"Frango no churrasco dos melhores da região, com uma relação qualidade-preço difícil de igualar."</p>
+          <div class="who">CLIENTE &middot; AVALIAÇÃO GOOGLE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCALIZAÇÃO & CONTACTOS ================= -->
+<section class="location-split-section" id="contactos">
+  <div class="wrap">
+    <div class="location-grid">
+      
+      <!-- Lado Esquerdo: Informações -->
+      <div class="location-content reveal">
+        <span class="sub-heading">ENCONTRE-NOS</span>
+        <h2>Venha ao Bom Gosto</h2>
+        
+        <div class="info-items">
+          <!-- Morada -->
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div>
+              <strong>MORADA</strong>
+              <p>Av. Fernando Valle 21A<br>2700-392 Amadora</p>
+            </div>
+          </div>
+          
+          <!-- Telefone -->
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div>
+              <strong>TELEFONE</strong>
+              <p>214 927 599</p>
+            </div>
+          </div>
+          
+          <!-- Horário -->
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <div>
+              <strong>HORÁRIO</strong>
+              <p>Fecha às 22:00 &middot; encerrado à terça-feira</p>
+            </div>
+          </div>
+
+          <!-- Serviço -->
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <div>
+              <strong>REDES SOCIAIS</strong>
+              <div class="social-row" style="display:flex;gap:15px;margin-top:5px;">
+                <a href="https://www.facebook.com/profile.php?id=100025904927066" aria-label="Facebook" target="_blank" rel="noopener" style="color:var(--white);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                <a href="https://www.instagram.com/churrasqueirabomgosto/" aria-label="Instagram" target="_blank" rel="noopener" style="color:var(--white);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botões -->
+        <div class="location-actions">
+          <a href="tel:+351214927599" class="btn-primary">Ligar Agora</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Churrasqueira+Bom+Gosto+Av.+Fernando+Valle+21A+Amadora" target="_blank" rel="noopener" class="btn-outline">Como Chegar</a>
+        </div>
+      </div>
+
+      <!-- Lado Direito: Mapa Embutido -->
+      <div class="location-map-container reveal">
+        <!-- Mapa do Google -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.6961159392233!2d-9.229158323608034!3d38.75344315250493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecdb4a9b5825d%3A0xc3b6b1580fa2f036!2sBom%20Gosto%20Churrasqueira!5e0!3m2!1spt-PT!2spt!4v1715000000000!5m2!1spt-PT!2spt" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<div class="grate-rule light" style="background:var(--black-2);"></div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap footer-row">
+    <span class="logo">
+      <svg class="flame" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1.5-1-2.5-1-2.5s1.5 1 1.5 4a6 6 0 1 1-12 0c0-4 3-5 3-6.5 0-1-.5-2-.5-2C10 2 12 2 12 2Z"/></svg>
+      Bom Gosto Churrasqueira
+    </span>
+    <span>Av. Fernando Valle 21A, Amadora · 214 927 599</span>
+    <span>© 2026 Bom Gosto Churrasqueira</span>
+  </div>
+</footer>
+
+<script>
+  // estado aberto/fechado: a churrasqueira encerra à terça-feira
+  (function(){
+    var el = document.getElementById('liveStatus');
+    if(!el) return;
+    var isTuesday = new Date().getDay() === 2;
+    if(isTuesday){
+      el.innerHTML = '<span class="dot-live closed"></span>Encerrado hoje &middot; reabre amanhã, quarta-feira';
+    } else {
+      el.innerHTML = '<span class="dot-live"></span>Aberto hoje &middot; fecha às <strong>22:00</strong>';
+    }
+  })();
+
+  // mobile menu
+  const headerEl = document.querySelector('header');
+  const burgerBtn = document.getElementById('burgerBtn');
+  burgerBtn.addEventListener('click', ()=>{
+    const open = headerEl.classList.toggle('nav-open');
+    burgerBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.querySelectorAll('.mobile-panel a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      headerEl.classList.remove('nav-open');
+      burgerBtn.setAttribute('aria-expanded','false');
+    });
+  });
+
+  // tabs
+  document.querySelectorAll('.tab').forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.menu-panel').forEach(p=>p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
