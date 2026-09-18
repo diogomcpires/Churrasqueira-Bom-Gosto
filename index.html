@@ -946,11 +946,16 @@
 }
   /* ---------- CORES DO CABEÇALHO ---------- */
   
-  /* Fundo Vermelho Escuro Premium */
+  /* Fundo creme da fachada, com as linhas vermelhas do letreiro */
   header {
-    background-color: #7a121b !important; /* Um vermelho bem mais escuro que o original */
-    border-bottom: none !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important; /* Sombra suave */
+    background:
+      repeating-linear-gradient(180deg, rgba(120,86,46,0.07) 0px, rgba(120,86,46,0.07) 1px, transparent 1px, transparent 3px),
+      repeating-linear-gradient(180deg, rgba(90,62,30,0.05) 0px, rgba(90,62,30,0.05) 2px, transparent 2px, transparent 9px),
+      linear-gradient(100deg, #EAD3AC 0%, #E3C79A 30%, #D8B77F 55%, #E6CB9E 78%, #DCC090 100%) !important;
+    background-color: #E3C79A !important; /* Tom creme/dourado do letreiro da loja */
+    border-top: 3px solid #FB4530 !important;
+    border-bottom: 3px solid #FB4530 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
   }
 
   /* Mantém o botão a preto */
@@ -974,19 +979,19 @@
     border: 2px solid var(--black) !important;
   }
 
-  /* Textos, Links e Números passam a branco/creme */
+  /* Textos, Links e Números passam a escuro (fundo agora é claro) */
   header .logo,
   header .logo div,
   header .logo span,
   header .nav-links a,
   header .tel-pill {
-    color: var(--white) !important;
+    color: var(--black) !important;
   }
 
-  /* Ícones (chama do logo e telefone) passam a branco */
+  /* Ícones (chama do logo e telefone) passam a escuro */
   header svg {
-    color: var(--white) !important;
-    fill: var(--white) !important;
+    color: var(--black) !important;
+    fill: var(--black) !important;
   }
 
   /* O botão "Pedir Online" passa a preto com letras brancas */
@@ -1349,10 +1354,14 @@
     </div>
 
     <div class="tabs reveal" role="tablist">
-      <button class="tab active" data-tab="grelhados">Grelhados &amp; Espetadas</button>
-      <button class="tab" data-tab="acomp">Pratos &amp; Acompanhamentos</button>
-      <button class="tab" data-tab="saladas">Saladas & Entradas</button>
+      <button class="tab active" data-tab="grelhados">Grelhados no Carvão</button>
+      <button class="tab" data-tab="carne">Pratos de Carne</button>
+      <button class="tab" data-tab="peixe">Pratos de Peixe</button>
+      <button class="tab" data-tab="saladas">Saladas</button>
+      <button class="tab" data-tab="acomp">Acompanhamentos</button>
       <button class="tab" data-tab="titi">Batatas Titi</button>
+      <button class="tab" data-tab="salgados">Salgados</button>
+      <button class="tab" data-tab="paoequeijo">Queijos &amp; Pão</button>
       <button class="tab" data-tab="bebidas-alc">Bebidas Alcoólicas</button>
       <button class="tab" data-tab="bebidas">Bebidas</button>
       <button class="tab" data-tab="sobremesas">Sobremesas</button>
@@ -1360,58 +1369,152 @@
 
     <div class="menu-panel active" id="grelhados">
       <div class="menu-list">
-        <div class="menu-item"><span class="name">Frango Assado</span></div>
-        <div class="menu-item"><span class="name">Meio Frango Assado</span></div>
-        <div class="menu-item"><span class="name">Picanha <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1 dose</span></span></div>
-        <div class="menu-item"><span class="name">Espetada de Porco <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
-        <div class="menu-item"><span class="name">Espetada de Porco Preto <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
-        <div class="menu-item"><span class="name">Entrecosto <span style="opacity:.5;font-size:12px;font-family:var(--mono)">300g</span></span></div>
-        <div class="menu-item"><span class="name">Frango Espiritual <span style="opacity:.5;font-size:12px;font-family:var(--mono)">300g</span></span></div>
-        <div class="menu-item"><span class="name">Espetada Frango e Bacon <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
-        <div class="menu-item"><span class="name">Espetada de Lulas <span style="opacity:.5;font-size:12px;font-family:var(--mono)">300g</span></span></div>
-        <div class="menu-item"><span class="name">Salsicha Toscana</span></div>
+        <div class="menu-item"><span class="name">Frango Assado</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bifes da Vazia</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bifes da Peru</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Coelho</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Entrecosto</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Entremeada</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Espetada de Frango</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Espetada de Lulas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Espetada de Peru</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Espetada de Porco</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Espetada de Porco Preto</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Febras de Porco</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Grelhada Mista s/ Picanha</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Maminha</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Piano de Porco</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Picanha</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salsicha Toscana</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Secretos de Porco Preto</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Lombinhos de Porco</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
       </div>
     </div>
 
-    <div class="menu-panel" id="acomp">
+    <div class="menu-panel" id="carne">
       <div class="menu-list">
-        <div class="menu-item"><span class="name">Bacalhau à Brás</span></div>
-        <div class="menu-item"><span class="name">Bacalhau no Forno com Crosta de Broa</span></div>
-        <div class="menu-item"><span class="name">Empadão de Carne</span></div>
-        <div class="menu-item"><span class="name">Almôndegas <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
-        <div class="menu-item"><span class="name">Batata à Murro <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
-        <div class="menu-item"><span class="name">Batata Frita</span></div>
-        <div class="menu-item"><span class="name">Arroz Branco <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
-        <div class="menu-item"><span class="name">Arroz de Cenoura <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
-        <div class="menu-item"><span class="name">Legumes Assados no Forno ou Cozidos</span></div>
-        <div class="menu-item"><span class="name">Feijão Preto <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
-        <div class="menu-item"><span class="name">Panado de Peru <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
-        <div class="menu-item"><span class="name">Pataniscas <span style="opacity:.5;font-size:12px;font-family:var(--mono)">250g</span></span></div>
+        <div class="menu-item"><span class="name">Alheira</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Alheira c/ Grelos e Batata</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Almôndegas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Arroz à Valenciana</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Arroz de Pato</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bifinhos de Peru c/ Cogumelos</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bochechas de Porco</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Cordeiro ou Cabrito</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Caracol</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Caril de Frango</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Carne de Porco à Portuguesa</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Carne de Porco à Alentejana</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Coelho à Caçador</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Costoletas de Porco</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Cozido à Portuguesa</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Crepes Recheados de Frango</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Dobrada</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Empadão de Carne</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Ensopado de Borrego</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Entrecosto à Minhota</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Entrecosto c/ Migas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Entrecosto Estufado</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Entremeada de Leitão</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Esparguete à Bolonhesa</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Favas c/ Entrecosto</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Feijoada à Transmontana</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Francesinha</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Frango à Brás</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Frango à Passarinho</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Frango Campo no Forno</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Frango Espiritual</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Jardineira de Vitela</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Iscas de Vaca</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Lasanha de Carne de Vaca</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Lasanha de Frango</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Leitão Fatiado</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Leitão Inteiro</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Lombo de Porco no Forno Recheado</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Mão de Vaca</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Moelas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Panados de Peru</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Panados de Frango</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Panados de Porco</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Peito de Frango Recheado</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Peito de Peru Recheado no Forno</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Perna de Frango Recheada</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Perna de Peru Recheada no Forno</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Perna de Porco no Forno</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Pernil de Porco</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Picapau de Novilho</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Picapau de Porco</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Pipis</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Rancho</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Rolo de Carne</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salsicha c/ Lombardo</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Strogonoff de Peru</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Strogonoff de Vitela</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vitela Estufada</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="peixe">
+      <div class="menu-list">
+        <div class="menu-item"><span class="name">Açorda de Gambas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Arroz de Polvo</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Arroz de Tamboril</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bacalhau à Lagareiro</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bacalhau à Brás</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bacalhau à Gomes de Sá</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bacalhau à Minhota</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bacalhau Assado no Forno</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bacalhau no Forno c/ Broa de Milho</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bacalhau c/ Gambas e Natas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bacalhau com Natas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bacalhau Frito c/ Broa</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Carapaus Fritos</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Choco Frito</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Choco à Lagareiro</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Empadão de Peixe / Atum</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Feijoada de Chocos</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Filetes de Pescada</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Lombinhos de Pescada</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Lulas à Lagareiro</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Lulas Recheadas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Massada de Peixe</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Pataniscas de Bacalhau</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Peixe Assado</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Peixe Frito</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Polvo à Lagareiro</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
       </div>
     </div>
 
     <div class="menu-panel" id="saladas">
       <div class="menu-list">
-        <div class="menu-item-wrap" style="padding:16px 0;border-bottom:1px solid var(--grey-line-on-dark);">
-          <div class="row"><span class="name">Salada Mista</span></div>
-          <span class="desc">Alface, cenoura, milho, cebola e tomate cherry.</span>
-        </div>
-        <div class="menu-item-wrap" style="padding:16px 0;border-bottom:1px solid var(--grey-line-on-dark);">
-          <div class="row"><span class="name">Esparregado</span></div>
-          <span class="desc">Azeite, alho, cebola, pimenta e vinagre (1 dose, 250g).</span>
-        </div>
-        <div class="menu-item-wrap" style="padding:16px 0;border-bottom:1px solid var(--grey-line-on-dark);">
-          <div class="row"><span class="name">Salada de Ovas</span></div>
-          <span class="desc">Azeite, alho, cebola, pimenta e vinagre (1 dose, 250g).</span>
-        </div>
-        <div class="menu-item-wrap" style="padding:16px 0;border-bottom:1px solid var(--grey-line-on-dark);">
-          <div class="row"><span class="name">Salada de Camarão</span></div>
-          <span class="desc">Azeite, alho, cebola, pimenta e vinagre (1 dose, 250g).</span>
-        </div>
-        <div class="menu-item-wrap" style="padding:16px 0;border-bottom:1px solid var(--grey-line-on-dark);">
-          <div class="row"><span class="name">Salada de Polvo</span></div>
-          <span class="desc">Azeite, alho, cebola, pimenta e vinagre (1 dose, 250g).</span>
-        </div>
+        <div class="menu-item"><span class="name">Azeitona Temperada</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salada Mista</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salada Mista Grande</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salada Russa</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Esparregado</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salada de Bacalhau com Grão</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salada de Camarão</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salada de Mexilhão</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salada de Orelha</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salada de Tomate</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salada de Ovas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Salada de Polvo</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="acomp">
+      <div class="menu-list">
+        <div class="menu-item"><span class="name">Arroz Branco</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Arroz de Cenoura</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Arroz de Legumes</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Batata Assada à Murro</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Batata Frita</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Empadão de Legumes</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Ervilhas c/ Ovos Escalfados</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Feijão Preto</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Legumes</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Migas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Sopa do Dia</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
       </div>
     </div>
 
@@ -1421,6 +1524,32 @@
         <div class="menu-item"><span class="name">Titi 180g</span></div>
         <div class="menu-item"><span class="name">Titi 250g</span></div>
         <div class="menu-item"><span class="name">Titi 400g</span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="salgados">
+      <div class="menu-list">
+        <div class="menu-item"><span class="name">Chamuças</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Coxinhas de Frango</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Croquetes</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Pastéis de Bacalhau</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Rissóis de Camarão</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Rissóis de Leitão</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="paoequeijo">
+      <div class="menu-list">
+        <div class="menu-item"><span class="name">Queijo Nisa</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Queijo Vaca Curado</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Queijo Vaca e Ovelha Curado</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bola de Mistura 80g</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Bola de Mafra 80g</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Pão de Centeio 80g</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Pão de Cereais 80g</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Pão de Mafra Pequeno 200g</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Pão de Mafra 400g</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Tostas</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
       </div>
     </div>
 
@@ -1479,8 +1608,25 @@
 
     <div class="menu-panel" id="sobremesas">
       <div class="menu-list">
-        <div class="menu-item"><span class="name">Cheesecake de Frutos Vermelhos</span></div>
+        <div class="menu-subhead" style="grid-column:1/-1;font-family:var(--display);font-weight:600;font-size:20px;color:var(--ember);margin:8px 0 4px;">Doces Caseiros</div>
+        <div class="menu-item"><span class="name">Pudim</span></div>
+        <div class="menu-item"><span class="name">Arroz Doce</span></div>
+        <div class="menu-item"><span class="name">Gelatina</span></div>
+        <div class="menu-subhead" style="grid-column:1/-1;font-family:var(--display);font-weight:600;font-size:20px;color:var(--ember);margin:20px 0 4px;">Semifrios</div>
+        <div class="menu-item"><span class="name">Doce do António Tradicional</span></div>
+        <div class="menu-item"><span class="name">Caramelo e Amendoim</span></div>
+        <div class="menu-item"><span class="name">Frutos Vermelhos</span></div>
+        <div class="menu-item"><span class="name">Café e Abacate</span></div>
+        <div class="menu-item"><span class="name">Chocolate</span></div>
+        <div class="menu-item"><span class="name">Sangria de Maracujá</span></div>
+        <div class="menu-item"><span class="name">Pastel de Nata</span></div>
+        <div class="menu-item"><span class="name">Doce da Casa</span></div>
         <div class="menu-item"><span class="name">Mousse de Chocolate</span></div>
+        <div class="menu-item"><span class="name">Cheesecake</span></div>
+        <div class="menu-item"><span class="name">Doce de Manjar</span></div>
+        <div class="menu-item"><span class="name">Doce da Avó</span></div>
+        <div class="menu-item"><span class="name">Caramelo Salgado</span></div>
+        <div class="menu-item"><span class="name">Doce da Neta</span></div>
         <div class="menu-item"><span class="name">Baba de Camelo</span></div>
       </div>
     </div>
