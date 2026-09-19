@@ -553,26 +553,26 @@
   .menu-section .section-note{color:rgba(250,246,239,0.55);}
 
   .tabs{
-    display:flex;gap:8px;flex-wrap:wrap;
+    display:flex;gap:10px;flex-wrap:wrap;
     margin-bottom:46px;
-    border-bottom:1px solid var(--grey-line-on-dark);
-    padding-bottom:0;
   }
   .tab{
     font-family:var(--mono);font-size:13.5px;
-    padding:12px 6px;margin-right:22px;
-    color:rgba(250,246,239,0.45);
-    position:relative;
+    padding:10px 20px;
+    background:transparent;
+    border:1px solid rgba(250,246,239,0.28);
+    border-radius:999px;
+    color:rgba(250,246,239,0.65);
     letter-spacing:0.02em;
+    transition:.2s ease;
   }
-  .tab::after{
-    content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;
-    background:var(--red);transform:scaleX(0);transform-origin:left;
-    transition:transform .2s ease;
+  .tab.active{
+    background:var(--red);
+    border-color:var(--red);
+    color:var(--white);
+    font-weight:700;
   }
-  .tab.active{color:var(--white);}
-  .tab.active::after{transform:scaleX(1);}
-  .tab:hover{color:var(--white);}
+  .tab:hover{border-color:var(--red);color:var(--white);}
 
   .menu-panel{display:none;}
   .menu-panel.active{display:block;animation:fadeIn .35s ease;}
@@ -584,7 +584,6 @@
   .menu-item{
     display:flex;align-items:baseline;gap:10px;
     padding:16px 0;
-    border-bottom:1px solid var(--grey-line-on-dark);
   }
   .menu-item .name{
     font-family:var(--display);font-size:18px;font-weight:500;
@@ -611,23 +610,11 @@
   }
 
   @media(max-width:760px){.menu-list{grid-template-columns:1fr;}}
-  @media(max-width:760px){
-    .tabs{
-      flex-wrap:nowrap;
-      overflow-x:auto;
-      -webkit-overflow-scrolling:touch;
-      gap:4px;
-      margin-left:-20px;margin-right:-20px;
-      padding-left:20px;padding-right:20px;
-      scrollbar-width:none;
-    }
-    .tabs::-webkit-scrollbar{display:none;}
-    .tab{
-      margin-right:0;
-      padding:10px 14px;
-      white-space:nowrap;
-      flex-shrink:0;
-    }
+  @media(max-width:480px){
+    .menu-item{flex-wrap:wrap;row-gap:4px;}
+    .menu-item .name{white-space:normal;}
+    .menu-item .fill{display:none;}
+    .menu-item .price{margin-left:auto;}
   }
 
   /* ---------- como pedir ---------- */
@@ -1807,7 +1794,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
             <div>
               <strong>HORÁRIO</strong>
-              <p>Fecha às 22:00 &middot; encerrado à terça-feira</p>
+              <p>10:00 &ndash; 15:00 e 17:00 &ndash; 22:00<br>Encerrado à terça-feira</p>
             </div>
           </div>
 
