@@ -611,6 +611,24 @@
   }
 
   @media(max-width:760px){.menu-list{grid-template-columns:1fr;}}
+  @media(max-width:760px){
+    .tabs{
+      flex-wrap:nowrap;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+      gap:4px;
+      margin-left:-20px;margin-right:-20px;
+      padding-left:20px;padding-right:20px;
+      scrollbar-width:none;
+    }
+    .tabs::-webkit-scrollbar{display:none;}
+    .tab{
+      margin-right:0;
+      padding:10px 14px;
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+  }
 
   /* ---------- como pedir ---------- */
   .steps{background:var(--white-2);}
@@ -1520,10 +1538,10 @@
 
     <div class="menu-panel" id="titi">
       <div class="menu-list">
-        <div class="menu-item"><span class="name">Titi 110g</span></div>
-        <div class="menu-item"><span class="name">Titi 180g</span></div>
-        <div class="menu-item"><span class="name">Titi 250g</span></div>
-        <div class="menu-item"><span class="name">Titi 400g</span></div>
+        <div class="menu-item"><span class="name">Titi 110g</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Titi 180g</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Titi 250g</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Titi 400g</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
       </div>
     </div>
 
@@ -1555,79 +1573,79 @@
 
     <div class="menu-panel" id="bebidas-alc">
       <div class="menu-list">
-        <div class="menu-item"><span class="name">Cerveja Sagres <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Cerveja Sagres Lata <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Cerveja Sagres Zero <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Cerveja Sagres <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
-        <div class="menu-item"><span class="name">Cerveja Super Bock <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Cerveja Super Bock Lata <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Cerveja Super Bock <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
-        <div class="menu-item"><span class="name">Somersby <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Martini <span style="opacity:.5;font-size:12px;font-family:var(--mono)">55ml</span></span></div>
-        <div class="menu-item"><span class="name">Favaios <span style="opacity:.5;font-size:12px;font-family:var(--mono)">55ml</span></span></div>
-        <div class="menu-item"><span class="name">Vinho Verde Casal Garcia <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
-        <div class="menu-item"><span class="name">Vinho Verde Muralhas <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
-        <div class="menu-item"><span class="name">Vinho Verde Mundus <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
-        <div class="menu-item"><span class="name">Vinho Mundus Rosé <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
-        <div class="menu-item"><span class="name">Vinho Mateus Rosé <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
-        <div class="menu-item"><span class="name">Vinho Tinto Pegões <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
-        <div class="menu-item"><span class="name">Vinho Tinto Papa Figos <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
-        <div class="menu-item"><span class="name">Vinho J.P. Tinto <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
-        <div class="menu-item"><span class="name">Vinho Branco J.P. <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
-        <div class="menu-item"><span class="name">Vinho Branco João Pires <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span></div>
+        <div class="menu-item"><span class="name">Cerveja Sagres <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Cerveja Sagres Lata <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Cerveja Sagres Zero <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Cerveja Sagres <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Cerveja Super Bock <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Cerveja Super Bock Lata <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Cerveja Super Bock <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Somersby <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Martini <span style="opacity:.5;font-size:12px;font-family:var(--mono)">55ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Favaios <span style="opacity:.5;font-size:12px;font-family:var(--mono)">55ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vinho Verde Casal Garcia <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vinho Verde Muralhas <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vinho Verde Mundus <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vinho Mundus Rosé <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vinho Mateus Rosé <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vinho Tinto Pegões <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vinho Tinto Papa Figos <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vinho J.P. Tinto <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vinho Branco J.P. <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Vinho Branco João Pires <span style="opacity:.5;font-size:12px;font-family:var(--mono)">750ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
       </div>
       <p style="font-family:var(--mono);font-size:13px;color:rgba(250,246,239,0.45);margin-top:24px;">Consumo responsável. Venda de bebidas alcoólicas proibida a menores de 18 anos.</p>
     </div>
 
     <div class="menu-panel" id="bebidas">
       <div class="menu-list">
-        <div class="menu-item"><span class="name">Água Luso <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
-        <div class="menu-item"><span class="name">Coca-Cola <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Coca-Cola <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
-        <div class="menu-item"><span class="name">Coca-Cola <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
-        <div class="menu-item"><span class="name">Coca-Cola Zero <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
-        <div class="menu-item"><span class="name">Coca-Cola Zero <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
-        <div class="menu-item"><span class="name">Sumol de Laranja <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Sumol de Laranja <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
-        <div class="menu-item"><span class="name">Sumol de Ananás <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Sumol de Ananás <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
-        <div class="menu-item"><span class="name">Ice Tea de Manga <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Ice Tea de Manga <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
-        <div class="menu-item"><span class="name">Ice Tea de Limão <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Ice Tea de Limão <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
-        <div class="menu-item"><span class="name">Ice Tea de Pêssego <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span></div>
-        <div class="menu-item"><span class="name">Ice Tea de Pêssego <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
-        <div class="menu-item"><span class="name">Compal de Pêssego <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
-        <div class="menu-item"><span class="name">Compal de Maçã <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
-        <div class="menu-item"><span class="name">Compal de Manga <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span></div>
-        <div class="menu-item"><span class="name">Guaraná <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
-        <div class="menu-item"><span class="name">7 Up <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
-        <div class="menu-item"><span class="name">Joy Laranja <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span></div>
+        <div class="menu-item"><span class="name">Água Luso <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Coca-Cola <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Coca-Cola <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Coca-Cola <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Coca-Cola Zero <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Coca-Cola Zero <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Sumol de Laranja <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Sumol de Laranja <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Sumol de Ananás <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Sumol de Ananás <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Manga <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Manga <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Limão <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Limão <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Pêssego <span style="opacity:.5;font-size:12px;font-family:var(--mono)">330ml</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Ice Tea de Pêssego <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Compal de Pêssego <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Compal de Maçã <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Compal de Manga <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Guaraná <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">7 Up <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Joy Laranja <span style="opacity:.5;font-size:12px;font-family:var(--mono)">1,5L</span></span><span class="fill"></span><span class="price">Sob Consulta</span></div>
       </div>
     </div>
 
     <div class="menu-panel" id="sobremesas">
       <div class="menu-list">
         <div class="menu-subhead" style="grid-column:1/-1;font-family:var(--display);font-weight:600;font-size:20px;color:var(--ember);margin:8px 0 4px;">Doces Caseiros</div>
-        <div class="menu-item"><span class="name">Pudim</span></div>
-        <div class="menu-item"><span class="name">Arroz Doce</span></div>
-        <div class="menu-item"><span class="name">Gelatina</span></div>
+        <div class="menu-item"><span class="name">Pudim</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Arroz Doce</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Gelatina</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
         <div class="menu-subhead" style="grid-column:1/-1;font-family:var(--display);font-weight:600;font-size:20px;color:var(--ember);margin:20px 0 4px;">Semifrios</div>
-        <div class="menu-item"><span class="name">Doce do António Tradicional</span></div>
-        <div class="menu-item"><span class="name">Caramelo e Amendoim</span></div>
-        <div class="menu-item"><span class="name">Frutos Vermelhos</span></div>
-        <div class="menu-item"><span class="name">Café e Abacate</span></div>
-        <div class="menu-item"><span class="name">Chocolate</span></div>
-        <div class="menu-item"><span class="name">Sangria de Maracujá</span></div>
-        <div class="menu-item"><span class="name">Pastel de Nata</span></div>
-        <div class="menu-item"><span class="name">Doce da Casa</span></div>
-        <div class="menu-item"><span class="name">Mousse de Chocolate</span></div>
-        <div class="menu-item"><span class="name">Cheesecake</span></div>
-        <div class="menu-item"><span class="name">Doce de Manjar</span></div>
-        <div class="menu-item"><span class="name">Doce da Avó</span></div>
-        <div class="menu-item"><span class="name">Caramelo Salgado</span></div>
-        <div class="menu-item"><span class="name">Doce da Neta</span></div>
-        <div class="menu-item"><span class="name">Baba de Camelo</span></div>
+        <div class="menu-item"><span class="name">Doce do António Tradicional</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Caramelo e Amendoim</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Frutos Vermelhos</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Café e Abacate</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Chocolate</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Sangria de Maracujá</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Pastel de Nata</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Doce da Casa</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Mousse de Chocolate</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Cheesecake</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Doce de Manjar</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Doce da Avó</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Caramelo Salgado</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Doce da Neta</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
+        <div class="menu-item"><span class="name">Baba de Camelo</span><span class="fill"></span><span class="price">Sob Consulta</span></div>
       </div>
     </div>
 
